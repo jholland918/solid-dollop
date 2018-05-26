@@ -1,0 +1,10 @@
+<GameLobby xmlns="MarkLight">
+  
+  <Region Id="GameLobbyMain">
+    <Group Spacing="10px">
+      <Label Text="Game Lobby" />
+      <Button Text="Quit" Click="Quit" />
+    </Group>
+  </Region>
+  
+</GameLobby>

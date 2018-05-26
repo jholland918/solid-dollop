@@ -1,0 +1,6 @@
+<GameLobbyScene xmlns="MarkLight">
+  <UserInterface>
+    <GameLobby />
+  </UserInterface>
+  <EventSystem />
+</GameLobbyScene>

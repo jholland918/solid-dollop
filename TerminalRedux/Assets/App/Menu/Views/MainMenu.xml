@@ -1,0 +1,132 @@
+<MainMenu xmlns="MarkLight">
+
+  <ViewSwitcher Id="ContentViewSwitcher" TransitionOut="SlideOut" TransitionIn="SlideIn" TransitionOutReverse="SlideOutReverse" TransitionInReverse="SlideInReverse">
+
+    <Region Id="Start">
+      <Group Spacing="10px">
+        <Label Text="Start" />
+        <Button Text="Play" Click="NavigateToProfileSelect" />
+        <Button Text="Quit" Click="Quit" />
+      </Group>
+    </Region>
+
+    <Region Id="ProfileSelect" Offset="1000,0,0,0">
+      <Group Spacing="10px" Width="60%">
+        <Label Text="Profile Select" />
+        <Button Text="Back" Click="Back" />
+        <Button Text="Create Profile" Click="NavigateTo" Data="ProfileForm" />
+        <List Id="ProfileList" Items="{ProfileItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
+          <ListItem Text="{#Item.Name}" IsTemplate="True" Click="ProfileClick" />
+        </List>
+      </Group>
+    </Region>
+
+    <Region Id="ProfileForm">
+      <Group Spacing="10px">
+        <Label Text="Profile Form" />
+        <Button Text="Submit" Click="SubmitProfileForm" IsDisabled="True" />
+        <Button Text="Back" Click="Back" />
+      </Group>
+    </Region>
+
+    <Region Id="ProfileHome">
+      <Group Spacing="10px">
+        <Label Text="Profile Home: {ProfileList.SelectedItem.Name}" />
+        <Button Text="Multiplayer" Click="NavigateTo" Data="Multiplayer" />
+        <Button Text="Lab" Click="OpenLab" IsDisabled="True" />
+        <Button Text="Options" Click="OpenOptions" IsDisabled="True" />
+        <Button Text="Back" Click="Back" />
+      </Group>
+    </Region>
+
+    <Region Id="Multiplayer">
+      <Group Spacing="10px">
+        <Label Text="Multiplayer" />
+        <Button Text="Game Search" Click="MultiplayerChoice" Data="GameSearch" />
+        <Button Text="Create Game" Click="MultiplayerChoice" Data="CreateGame" />
+        <Button Text="Back" Click="Back" />
+      </Group>
+    </Region>
+
+    <Region Id="GameSearch">
+      <Group Spacing="10px">
+        <Label Text="Game Search" />
+        <ComboBox Id="SearchGameType" ItemSelected="SearchGameTypeSelected">
+          <ComboBoxItem Text="Battle Royale" />
+          <ComboBoxItem Text="Tag" />
+        </ComboBox>
+        <Button Text="Search" Click="Search" />
+        <Button Text="Back" Click="Back" />
+      </Group>
+    </Region>
+
+    <Region Id="GameLobbies">
+      <Group Spacing="10px">
+        <Label Text="Game Lobbies" />
+        <Button Text="Back" Click="Back" />
+        <List Id="LobbyList" Items="{LobbyItems}" Width="194" Height="200" IsScrollable="True" Orientation="Vertical">
+          <ListItem Text="{#Item.Name}" IsTemplate="True" Click="LobbyClick" />
+        </List>
+      </Group>
+    </Region>
+
+    <Region Id="CreateGame">
+      <Group Spacing="10px">
+        <Label Text="Create Game" />
+        <ComboBox Id="CreateGameType" ItemSelected="CreateGameTypeSelected">
+          <ComboBoxItem Text="Battle Royale" />
+          <ComboBoxItem Text="Tag" />
+        </ComboBox>
+        <Button Text="Create" Click="NavigateTo" Data="LevelSelect" />
+        <Button Text="Back" Click="Back" />
+      </Group>
+    </Region>
+
+    <Region Id="LevelSelect">
+      <Group Spacing="10px">
+        <Label Text="Level Select" />
+        <Button Text="Back" Click="Back" />
+        <List Id="LevelList" Items="{LevelItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
+          <ListItem Text="{#Item.Name}" IsTemplate="True" Click="LevelClick" />
+        </List>
+      </Group>
+    </Region>
+
+    <Region Id="CharacterSelect">
+      <Group Spacing="10px">
+        <Label Text="Character Select" />
+        <Button Text="Back" Click="Back" />
+        <List Id="CharacterList" Items="{CharacterItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
+          <ListItem Text="{#Item.Name}" IsTemplate="True" Click="CharacterClick" />
+        </List>
+      </Group>
+    </Region>
+
+    <Region Id="ArsenalSelect">
+      <Group Spacing="10px">
+        <Label Text="Arsenal Select" />
+        <Button Text="Back" Click="Back" />
+        <List Id="ArsenalList" Items="{ArsenalItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
+          <ListItem Text="{#Item.Name}" IsTemplate="True" Click="ArsenalClick" />
+        </List>
+      </Group>
+    </Region>
+
+  </ViewSwitcher>
+
+  <ViewAnimation Id="SlideOut">
+    <Animate Field="Offset" To="-1000,0,0,0" Duration="250ms" />
+  </ViewAnimation>
+  <ViewAnimation Id="SlideIn">
+    <Animate Field="Offset" To="0,0,0,0" Duration="250ms" EasingFunction="QuadraticEaseOut" />
+  </ViewAnimation>
+
+  <ViewAnimation Id="SlideOutReverse">
+    <Animate Field="Offset" To="1000,0,0" Duration="250ms" />
+  </ViewAnimation>
+  <ViewAnimation Id="SlideInReverse">
+    <Animate Field="Offset" To="0,0,0" Duration="250ms" EasingFunction="QuadraticEaseOut" />
+  </ViewAnimation>
+
+  <EventSystem />
+</MainMenu>
