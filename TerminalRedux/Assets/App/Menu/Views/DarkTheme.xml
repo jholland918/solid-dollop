@@ -1,4 +1,4 @@
-<Theme Name="DarkTheme" BaseDirectory="Assets/App/Menu/ThemeAssets/" xmlns="MarkLight">
+<Theme Name="DarkTheme" BaseDirectory="Assets/App/Menu/Theme/" xmlns="MarkLight">
   <Label Font="Fonts/Roboto-Bold.ttf" FontSize="18" FontColor="#ffffff" Width="200" Height="50" />
   <Label Style="ShowcaseHeader" Font="Fonts/Roboto-Regular.ttf" FontSize="26" FontColor="#ffffff" />
   <Label Style="ShowcaseDescription" Font="Fonts/Roboto-Light.ttf" FontSize="18" FontColor="#ffffff" />
@@ -46,13 +46,12 @@
   <Image Style="ShowcaseButtonContent" Sprite="Sprites/RainbowSquare.psd" Width="20" Height="20" Offset="10,0,0,0" Alignment="Left" />
   <Image Style="ShowcaseImage" Sprite="Sprites/RainbowSquare.psd" Width="400" Height="400" />
 
-  <Frame Style="Window" BackgroundColor="Gray80" />
+  <Frame Style="Window" BackgroundColor="#303030" />
   <Frame Style="ShowcaseGroup" BackgroundColor="#7d7d7d" ContentMargin="5px" />
   <Frame Style="ShowcasePanel" BackgroundColor="#252931" Alignment="Top" />
 
+  <Region Style="Window" BackgroundColor="#303030" />
   <Region Style="ShowcaseListRegion" Margin="5px" BackgroundColor="#7d7d7d" />
-  <Region Style="Window" BackgroundColor="Gray80" />
-  <Region Style="DefaultBackgroundRegion" BackgroundColor="#131419" />
 
   <HyperLink FontColor="#8cade3" Highlighted-FontColor="#c7dafb" Pressed-FontColor="#ef706a" Font="Fonts/Roboto-Light.ttf" FontSize="18" Width="200" Height="50" />
 

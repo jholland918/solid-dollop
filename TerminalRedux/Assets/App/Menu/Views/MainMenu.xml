@@ -2,17 +2,17 @@
 
   <ViewSwitcher Id="ContentViewSwitcher" TransitionOut="SlideOut" TransitionIn="SlideIn" TransitionOutReverse="SlideOutReverse" TransitionInReverse="SlideInReverse">
 
-    <Region Id="Start">
+    <Region Id="Start" Style="Window">
       <Group Spacing="10px">
-        <Label Text="Start" />
+        <Label Style="ShowcaseHeader" Text="Start" />
         <Button Text="Play" Click="NavigateToProfileSelect" />
         <Button Text="Quit" Click="Quit" />
       </Group>
     </Region>
 
-    <Region Id="ProfileSelect" Offset="1000,0,0,0">
+    <Region Id="ProfileSelect" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px" Width="60%">
-        <Label Text="Profile Select" />
+        <Label Style="ShowcaseHeader" Text="Profile Select" />
         <Button Text="Back" Click="Back" />
         <Button Text="Create Profile" Click="NavigateTo" Data="ProfileForm" />
         <List Id="ProfileList" Items="{ProfileItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
@@ -21,17 +21,17 @@
       </Group>
     </Region>
 
-    <Region Id="ProfileForm">
+    <Region Id="ProfileForm" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Profile Form" />
+        <Label Style="ShowcaseHeader" Text="Profile Form" />
         <Button Text="Submit" Click="SubmitProfileForm" IsDisabled="True" />
         <Button Text="Back" Click="Back" />
       </Group>
     </Region>
 
-    <Region Id="ProfileHome">
+    <Region Id="ProfileHome" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Profile Home: {ProfileList.SelectedItem.Name}" />
+        <Label Style="ShowcaseHeader" Text="Profile Home: {ProfileList.SelectedItem.Name}" />
         <Button Text="Multiplayer" Click="NavigateTo" Data="Multiplayer" />
         <Button Text="Lab" Click="OpenLab" IsDisabled="True" />
         <Button Text="Options" Click="OpenOptions" IsDisabled="True" />
@@ -39,18 +39,18 @@
       </Group>
     </Region>
 
-    <Region Id="Multiplayer">
+    <Region Id="Multiplayer" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Multiplayer" />
+        <Label Style="ShowcaseHeader" Text="Multiplayer" />
         <Button Text="Game Search" Click="MultiplayerChoice" Data="GameSearch" />
         <Button Text="Create Game" Click="MultiplayerChoice" Data="CreateGame" />
         <Button Text="Back" Click="Back" />
       </Group>
     </Region>
 
-    <Region Id="GameSearch">
+    <Region Id="GameSearch" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Game Search" />
+        <Label Style="ShowcaseHeader" Text="Game Search" />
         <ComboBox Id="SearchGameType" ItemSelected="SearchGameTypeSelected">
           <ComboBoxItem Text="Battle Royale" />
           <ComboBoxItem Text="Tag" />
@@ -60,9 +60,9 @@
       </Group>
     </Region>
 
-    <Region Id="GameLobbies">
+    <Region Id="GameLobbies" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Game Lobbies" />
+        <Label Style="ShowcaseHeader" Text="Game Lobbies" />
         <Button Text="Back" Click="Back" />
         <List Id="LobbyList" Items="{LobbyItems}" Width="194" Height="200" IsScrollable="True" Orientation="Vertical">
           <ListItem Text="{#Item.Name}" IsTemplate="True" Click="LobbyClick" />
@@ -70,9 +70,9 @@
       </Group>
     </Region>
 
-    <Region Id="CreateGame">
+    <Region Id="CreateGame" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Create Game" />
+        <Label Style="ShowcaseHeader" Text="Create Game" />
         <ComboBox Id="CreateGameType" ItemSelected="CreateGameTypeSelected">
           <ComboBoxItem Text="Battle Royale" />
           <ComboBoxItem Text="Tag" />
@@ -82,9 +82,9 @@
       </Group>
     </Region>
 
-    <Region Id="LevelSelect">
+    <Region Id="LevelSelect" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Level Select" />
+        <Label Style="ShowcaseHeader" Text="Level Select" />
         <Button Text="Back" Click="Back" />
         <List Id="LevelList" Items="{LevelItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
           <ListItem Text="{#Item.Name}" IsTemplate="True" Click="LevelClick" />
@@ -92,9 +92,9 @@
       </Group>
     </Region>
 
-    <Region Id="CharacterSelect">
+    <Region Id="CharacterSelect" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Character Select" />
+        <Label Style="ShowcaseHeader" Text="Character Select" />
         <Button Text="Back" Click="Back" />
         <List Id="CharacterList" Items="{CharacterItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
           <ListItem Text="{#Item.Name}" IsTemplate="True" Click="CharacterClick" />
@@ -102,9 +102,9 @@
       </Group>
     </Region>
 
-    <Region Id="ArsenalSelect">
+    <Region Id="ArsenalSelect" Style="Window" Offset="1000,0,0,0">
       <Group Spacing="10px">
-        <Label Text="Arsenal Select" />
+        <Label Style="ShowcaseHeader" Text="Arsenal Select" />
         <Button Text="Back" Click="Back" />
         <List Id="ArsenalList" Items="{ArsenalItems}" Width="200" Height="200" IsScrollable="True" Orientation="Vertical">
           <ListItem Text="{#Item.Name}" IsTemplate="True" Click="ArsenalClick" />
