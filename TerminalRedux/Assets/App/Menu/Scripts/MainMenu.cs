@@ -61,6 +61,8 @@ namespace Assets.App.Menu.Scripts
 
         public void NavigateToProfileSelect()
         {
+            // TODO: Get profiles from db.
+            ProfileItems.Clear();
             ProfileItems.Add(new Profile { Name = "Foo" });
             ProfileItems.Add(new Profile { Name = "Bar" });
             ProfileItems.Add(new Profile { Name = "Baz" });
@@ -83,6 +85,8 @@ namespace Assets.App.Menu.Scripts
 
         public void Search()
         {
+            // TODO: Get lobbies from networking api
+            LobbyItems.Clear();
             LobbyItems.Add(new Lobby { Name = "Chip" });
             LobbyItems.Add(new Lobby { Name = "Jojo" });
             LobbyItems.Add(new Lobby { Name = "Gains" });
